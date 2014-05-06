@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <style>
+            .shareIcons .main {
+                width:20px;
+                height:20px;
+                background-color:red;
+                font-size:32px;
+                line-height: 22px;
+                position:absolute;
+                z-index:40;
+                border-radius: 25px;
+                padding:15px;
+                text-align: center;
+                vertical-align: middle;
+                font-weight: bold;
+                cursor:pointer;
+                border:1px solid gray;
+            }
+            .active.shareIcons {
+                opacity:1;
+
+            }
+            .shareIcons{
+                position:fixed;
+                left:0;
+                top:30; 
+                opacity:0.6;
+                 margin:25px;
+                -webkit-transition: all 0.4s ease-in;
+                -moz-transition: all 0.4s ease-in;
+                -o-transition: all 0.4s ease-in;
+                -ms-transition: all 0.4s ease-in;
+                transition: all 0.4s ease-in;
+            }
+            .shareIcons span {
+                position:absolute;
+                left:0;
+                top:0;
+                background-color: green;
+                width:20px;
+                height:20px;
+                padding:15px;
+                top:0;
+                cursor:pointer;
+            }
+            .active span.one {
+                left:80px;
+            }
+            .active span.two {
+                left:160px;
+            }
+            .active span.three {
+                left:240px;
+            }
+            .shareIcons span{
+                border-radius:25px;
+                -webkit-transition: all 0.6s ease-in-out;
+                -moz-transition: all 0.6s ease-in-out;
+                -o-transition: all 0.6s ease-in-out;
+                -ms-transition: all 0.6s ease-in-out;
+                transition: all 0.6s ease-in-out;
+            }
+
+            .active span {
+                display:inline;
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        </style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+<script>
+$(document).ready(function(){
+  $(".main").click(function(){
+    $(".shareIcons").toggleClass("active");
+  });
+});
+</script>
+    </head>
+    <body>
+        <h1>welcome</h1>
+        You can use this approach to implement the social sharing buttons in the limited area without obstructing the content. Click on the blurred circular area.
+        <div class="shareIcons">
+           <div class="main">+</div>
+            <span class="one">FB</span>
+            <span class="two">TW</span>
+            <span class="three">G+</span>
+        </div>
+    </body>
+</html>
